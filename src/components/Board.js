@@ -26,7 +26,7 @@ class Board extends Component {
       return <Card key={i} text={card.text} emoji={card.emoji} />
     })
     return (
-      <div>
+      <div className="board">
         {this.props.boardName}
         {cardCollection}
       </div>
