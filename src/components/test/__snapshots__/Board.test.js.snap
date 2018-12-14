@@ -5,7 +5,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Board
     boardName="test"
-    url="example_url"
+    boardUrl="board_url"
+    cardUrl="card_url"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -20,12 +21,42 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [],
-      "className": "board",
+      "children": Array [
+        <NewCardForm
+          addCardCallback={[Function]}
+        />,
+        <div
+          className="board"
+        />,
+      ],
     },
     "ref": null,
-    "rendered": Array [],
-    "type": "div",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "addCardCallback": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "board",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+    ],
+    "type": "section",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -33,12 +64,42 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [],
-        "className": "board",
+        "children": Array [
+          <NewCardForm
+            addCardCallback={[Function]}
+          />,
+          <div
+            className="board"
+          />,
+        ],
       },
       "ref": null,
-      "rendered": Array [],
-      "type": "div",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "addCardCallback": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "board",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+      ],
+      "type": "section",
     },
   ],
   Symbol(enzyme.__options__): Object {

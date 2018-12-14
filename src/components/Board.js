@@ -102,6 +102,7 @@ class Board extends Component {
 
 Board.propTypes = {
   boardUrl: PropTypes.string.isRequired,
+  cardUrl: PropTypes.string,
   boardName: PropTypes.string.isRequired,
 };
 

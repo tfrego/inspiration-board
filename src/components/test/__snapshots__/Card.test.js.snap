@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`board will match the Board Snapshot 1`] = `
+exports[`card will match the Card Snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
@@ -21,6 +21,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          x
+        </button>,
         <p
           className="card__content-text"
         >
@@ -36,6 +42,19 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "x",
+          "onClick": [Function],
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": "x",
+        "type": "button",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -70,6 +89,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+            x
+          </button>,
           <p
             className="card__content-text"
           >
@@ -85,6 +110,19 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "x",
+            "onClick": [Function],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": "x",
+          "type": "button",
+        },
         Object {
           "instance": null,
           "key": undefined,
