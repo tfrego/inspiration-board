@@ -7,7 +7,7 @@ import './Card.css';
 class Card extends Component {
 
   render() {
-    const getEmoji = (item) => (item ? emoji.getUnicode(item) : null);
+    const getEmoji = (item) => (item && emoji.getUnicode(item));
 
     return (
       <div className="card card__content">

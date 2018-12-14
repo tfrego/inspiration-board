@@ -7,19 +7,19 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 // import CARD_DATA from '../data/card-data.json';
 
-const URL = 'https://inspiration-board.herokuapp.com/boards/Trang/cards';
-
 class Board extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       cards: [],
+      url: `${this.props.url}${this.props.boardName}/cards`,
     };
   }
 
   componentDidMount() {
-    axios.get(URL)
+
+    axios.get(this.state.url)
       .then((response) => {
         const cards = response.data.map((card) => {
           console.log(card.card);
@@ -38,7 +38,6 @@ class Board extends Component {
     })
     return (
       <div className="board">
-        {this.props.boardName}
         {cardCollection}
       </div>
     )
@@ -47,8 +46,8 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-  url: PropTypes.string,
-  boardName: PropTypes.string,
+  url: PropTypes.string.isRequired,
+  boardName: PropTypes.string.isRequired,
 };
 
 export default Board;
