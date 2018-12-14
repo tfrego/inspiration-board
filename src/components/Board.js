@@ -22,13 +22,13 @@ class Board extends Component {
     axios.get(this.state.boardUrl)
       .then((response) => {
         const cards = response.data.map((card) => {
-          console.log(card.card);
           const newCard = {
             ...card.card,
           }
           return newCard;
         })
         this.setState({cards: cards});
+        console.log(this.state);
       })
   }
 
@@ -37,7 +37,7 @@ class Board extends Component {
     axios.delete(`${this.props.cardUrl}${cardId}`)
       .then( (response) => {
         console.log(response);
-        const {cards} = this.state;
+        const cards = this.state.cards;
 
         const card = cards.find( (card) => {
           return card.id === cardId;
@@ -56,6 +56,28 @@ class Board extends Component {
 
   addCard = (newCard) => {
     console.log(newCard);
+    const apiPayLoad = {
+      text: newCard.text,
+      emoji: newCard.emoji,
+    }
+
+    axios.post(this.state.boardUrl, apiPayLoad)
+      .then( (response) => {
+        console.log(response);
+        const myNewCard = response.data;
+        console.log(myNewCard);
+
+        const cards = this.state.cards;
+        cards.push(myNewCard.card);
+
+        this.setState({cards: cards});
+        console.log(this.state)
+      })
+      .catch( (error) => {
+        this.setState({
+          errorMessage: `Failure ${error.message}`,
+        })
+      })
   }
 
   render() {

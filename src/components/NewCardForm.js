@@ -19,8 +19,16 @@ class NewCardForm extends Component {
     const field = event.target.name;
     const value = event.target.value;
 
+    console.log(field);
+
     const updatedState = {};
-    updatedState[field] = value;
+
+    if (field === "emoji") {
+      updatedState[field] = emoji.getName(value);
+    } else {
+      updatedState[field] = value;
+    }
+
     this.setState(updatedState);
   }
 
@@ -52,7 +60,7 @@ class NewCardForm extends Component {
           <div>
             <label className="new-card-form__form-label" htmlFor="emoji">Emoji</label>
             <select className="new-card-form__form-select" name="emoji" onChange={this.onFormChange} value={this.state.emoji}>
-            {EMOJI_LIST.map((value) => <option>{getEmoji(value)}</option>)}
+            {EMOJI_LIST.map((value, index) => <option key={index}>{getEmoji(value)}</option>)}
             </select>
           </div>
           <input className="new-card-form__form-button" type="submit" name="submit" value="Submit" />
