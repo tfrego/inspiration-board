@@ -47,7 +47,15 @@ class Board extends Component {
 
         this.setState({cards: cards})
       })
+      .catch( (error) => {
+        this.setState({
+          errorMessage: `Failure ${error.message}`,
+        })
+      })
+  }
 
+  addCard = (newCard) => {
+    console.log(newCard);
   }
 
   render() {
@@ -55,12 +63,16 @@ class Board extends Component {
       return <Card
               key={card.id}
               {...card}
-              deleteCardCallback={this.deleteCard}/>
+              deleteCardCallback={this.deleteCard}
+              />
     })
     return (
-      <div className="board">
-        {cardCollection}
-      </div>
+      <section>
+        <NewCardForm addCardCallback={this.addCard} />
+        <div className="board">
+          {cardCollection}
+        </div>
+      </section>
     )
   }
 

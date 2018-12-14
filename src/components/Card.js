@@ -22,6 +22,7 @@ class Card extends Component {
 Card.propTypes = {
   text: PropTypes.string,
   emoji: PropTypes.string,
+  deleteCardCallback: PropTypes.func,
 };
 
 export default Card;
