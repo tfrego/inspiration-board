@@ -11,6 +11,7 @@ class Card extends Component {
 
     return (
       <div className="card card__content">
+        <button type="button" onClick={() => this.props.deleteCardCallback(this.props.id)}>x</button>
         <p className="card__content-text">{this.props.text}</p>
         <p className="card__content-emoji">{getEmoji(this.props.emoji)}</p>
       </div>

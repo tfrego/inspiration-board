@@ -32,9 +32,17 @@ class Board extends Component {
       })
   }
 
+  deleteCard = (cardId) => {
+    console.log(cardId);
+
+  }
+
   render() {
     const cardCollection = this.state.cards.map((card, i) => {
-      return <Card key={card.id} text={card.text} emoji={card.emoji} />
+      return <Card
+              key={card.id}
+              {...card}
+              deleteCardCallback={this.deleteCard}/>
     })
     return (
       <div className="board">
