@@ -10,10 +10,12 @@ class Card extends Component {
     const getEmoji = (item) => (item && emoji.getUnicode(item));
 
     return (
-      <div className="card card__content">
-        <button type="button" onClick={() => this.props.deleteCardCallback(this.props.id)}>x</button>
-        <p className="card__content-text">{this.props.text}</p>
-        <p className="card__content-emoji">{getEmoji(this.props.emoji)}</p>
+      <div className="card">
+        <button className="card__delete" onClick={() => this.props.deleteCardCallback(this.props.id)}>x</button>
+        <div className="card__content">
+          <p className="card__content-text">{this.props.text}</p>
+          <p className="card__content-emoji">{getEmoji(this.props.emoji)}</p>
+        </div>
       </div>
     )
   }
