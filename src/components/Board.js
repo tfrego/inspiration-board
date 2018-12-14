@@ -13,13 +13,13 @@ class Board extends Component {
 
     this.state = {
       cards: [],
-      url: `${this.props.url}${this.props.boardName}/cards`,
+      boardUrl: `${this.props.boardUrl}${this.props.boardName}/cards`,
     };
   }
 
   componentDidMount() {
 
-    axios.get(this.state.url)
+    axios.get(this.state.boardUrl)
       .then((response) => {
         const cards = response.data.map((card) => {
           console.log(card.card);
@@ -34,6 +34,19 @@ class Board extends Component {
 
   deleteCard = (cardId) => {
     console.log(cardId);
+    axios.delete(`${this.props.cardUrl}${cardId}`)
+      .then( (response) => {
+        console.log(response);
+        const {cards} = this.state;
+
+        const card = cards.find( (card) => {
+          return card.id === cardId;
+        })
+
+        cards.splice( cards.indexOf(card), 1 );
+
+        this.setState({cards: cards})
+      })
 
   }
 
@@ -54,7 +67,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-  url: PropTypes.string.isRequired,
+  boardUrl: PropTypes.string.isRequired,
   boardName: PropTypes.string.isRequired,
 };
 
