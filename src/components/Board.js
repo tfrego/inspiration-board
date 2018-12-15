@@ -13,11 +13,28 @@ class Board extends Component {
 
     this.state = {
       cards: [],
+      boards: [],
       boardUrl: `${this.props.boardUrl}${this.props.boardName}/cards`,
     };
   }
 
   componentDidMount() {
+    axios.get(this.props.boardUrl)
+      .then((response) => {
+        const boards = response.data.map((board) => {
+          const newBoard = {
+            ...board.board,
+          }
+          return newBoard;
+        })
+        this.setState({boards: boards});
+        console.log(this.state);
+      })
+      .catch( (error) => {
+        this.setState({
+          errorMessage: `Failure ${error.message}`,
+        })
+      })
 
     axios.get(this.state.boardUrl)
       .then((response) => {
@@ -29,6 +46,11 @@ class Board extends Component {
         })
         this.setState({cards: cards});
         console.log(this.state);
+      })
+      .catch( (error) => {
+        this.setState({
+          errorMessage: `Failure ${error.message}`,
+        })
       })
   }
 
