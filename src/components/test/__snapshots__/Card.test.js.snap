@@ -22,23 +22,27 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <button
+          className="card__delete"
           onClick={[Function]}
-          type="button"
         >
           x
         </button>,
-        <p
-          className="card__content-text"
+        <div
+          className="card__content"
         >
-          hello
-        </p>,
-        <p
-          className="card__content-emoji"
-        >
-          😍
-        </p>,
+          <p
+            className="card__content-text"
+          >
+            hello
+          </p>
+          <p
+            className="card__content-emoji"
+          >
+            😍
+          </p>
+        </div>,
       ],
-      "className": "card card__content",
+      "className": "card",
     },
     "ref": null,
     "rendered": Array [
@@ -48,8 +52,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "x",
+          "className": "card__delete",
           "onClick": [Function],
-          "type": "button",
         },
         "ref": null,
         "rendered": "x",
@@ -60,24 +64,48 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "hello",
-          "className": "card__content-text",
+          "children": Array [
+            <p
+              className="card__content-text"
+            >
+              hello
+            </p>,
+            <p
+              className="card__content-emoji"
+            >
+              😍
+            </p>,
+          ],
+          "className": "card__content",
         },
         "ref": null,
-        "rendered": "hello",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "😍",
-          "className": "card__content-emoji",
-        },
-        "ref": null,
-        "rendered": "😍",
-        "type": "p",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "hello",
+              "className": "card__content-text",
+            },
+            "ref": null,
+            "rendered": "hello",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "😍",
+              "className": "card__content-emoji",
+            },
+            "ref": null,
+            "rendered": "😍",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -90,23 +118,27 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <button
+            className="card__delete"
             onClick={[Function]}
-            type="button"
           >
             x
           </button>,
-          <p
-            className="card__content-text"
+          <div
+            className="card__content"
           >
-            hello
-          </p>,
-          <p
-            className="card__content-emoji"
-          >
-            😍
-          </p>,
+            <p
+              className="card__content-text"
+            >
+              hello
+            </p>
+            <p
+              className="card__content-emoji"
+            >
+              😍
+            </p>
+          </div>,
         ],
-        "className": "card card__content",
+        "className": "card",
       },
       "ref": null,
       "rendered": Array [
@@ -116,8 +148,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "x",
+            "className": "card__delete",
             "onClick": [Function],
-            "type": "button",
           },
           "ref": null,
           "rendered": "x",
@@ -128,24 +160,48 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "hello",
-            "className": "card__content-text",
+            "children": Array [
+              <p
+                className="card__content-text"
+              >
+                hello
+              </p>,
+              <p
+                className="card__content-emoji"
+              >
+                😍
+              </p>,
+            ],
+            "className": "card__content",
           },
           "ref": null,
-          "rendered": "hello",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "😍",
-            "className": "card__content-emoji",
-          },
-          "ref": null,
-          "rendered": "😍",
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "hello",
+                "className": "card__content-text",
+              },
+              "ref": null,
+              "rendered": "hello",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "😍",
+                "className": "card__content-emoji",
+              },
+              "ref": null,
+              "rendered": "😍",
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",
