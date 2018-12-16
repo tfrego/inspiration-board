@@ -45,19 +45,18 @@ class NewCardForm extends Component {
 
     return (
       <section className="new-card-form">
+        <h1 className="new-card-form__header">Add an inspiration</h1>
         <form className="new-card-form__form" onSubmit={this.onSubmit}>
-          <h1 className="new-card-form__header">Add an inspiration</h1>
-          <div>
+
             <label className="new-card-form__form-label" htmlFor="text">Text</label>
             <textarea className="new-card-form__form-textarea" name="text" onChange={this.onFormChange} value={this.state.text}></textarea>
-          </div>
-          <div>
+
             <label className="new-card-form__form-label" htmlFor="emoji">Emoji</label>
             <select className="new-card-form__form-select" name="emoji"
               onChange={this.onFormChange} value={this.state.emoji}>
             {EMOJI_LIST.map((value, index) => <option key={index} value={value}>{getEmoji(value)}</option>)}
             </select>
-          </div>
+          
           <input className="new-card-form__form-button" type="submit" name="submit" value="Submit" />
         </form>
       </section>
