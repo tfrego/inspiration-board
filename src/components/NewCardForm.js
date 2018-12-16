@@ -45,7 +45,7 @@ class NewCardForm extends Component {
 
     return (
       <section className="new-card-form">
-        <h1 className="new-card-form__header">Add an inspiration</h1>
+        <h3 className="new-card-form__header">Add an inspiration</h3>
         <form className="new-card-form__form" onSubmit={this.onSubmit}>
 
             <label className="new-card-form__form-label" htmlFor="text">Text</label>
@@ -56,7 +56,7 @@ class NewCardForm extends Component {
               onChange={this.onFormChange} value={this.state.emoji}>
             {EMOJI_LIST.map((value, index) => <option key={index} value={value}>{getEmoji(value)}</option>)}
             </select>
-          
+
           <input className="new-card-form__form-button" type="submit" name="submit" value="Submit" />
         </form>
       </section>

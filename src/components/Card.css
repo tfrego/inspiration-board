@@ -86,7 +86,7 @@
 .card__content-text {
   text-overflow: ellipsis;
   overflow: hidden;
-  font-family: 'Reenie Beanie', Helvetica, sans-serif;
+  font-family: 'Reenie Beanie', cursive;
   font-size: 1.5rem;
 }
 
