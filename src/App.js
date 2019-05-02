@@ -10,8 +10,8 @@ class App extends Component {
           <h1 className="header__h1"><span className="header__text">Inspiration Board</span></h1>
         </header>
         <Board
-          boardUrl="https://inspiration-board.herokuapp.com/boards/"
-          cardUrl="https://inspiration-board.herokuapp.com/cards/"
+          boardUrl="https://trangs-inspo-board-api.herokuapp.com/boards/"
+          cardUrl="https://trangs-inspo-board-api.herokuapp.com/cards/"
           boardName="Trang"
           />
       </section>
